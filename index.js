@@ -1,0 +1,25 @@
+// Array.prototype.findIndex - MIT License (c) 2013 Paul Miller <http://paulmillr.com>
+// For all details and docs: <https://github.com/paulmillr/Array.prototype.findIndex>
+(function(globals){
+  var findIndex = function(predicate) {
+    var list = Object(this);
+    var length = list.length >>> 0; // ES.ToUint32;
+    if (length === 0) return -1;
+    if (typeof predicate !== 'function') {
+      throw new TypeError('Array#findIndex: predicate must be a function');
+    }
+    var thisArg = arguments.length > 1 ? arguments[1] : undefined;
+    for (var i = 0; i < length && i in list; i++) {
+      if (predicate.call(thisArg, list[i], i, list)) return i;
+    }
+    return -1;
+  };
+
+  if (Object.defineProperty) {
+    Object.defineProperty(Array.prototype, 'findIndex', {
+      value: findIndex, configurable: true, enumerable: false, writable: true
+    });
+  } else {
+    Array.prototype.findIndex = findIndex;
+  }
+})(this);
