@@ -17,7 +17,7 @@
 
   if (Object.defineProperty) {
     Object.defineProperty(Array.prototype, 'findIndex', {
-      value: findIndex, configurable: true, enumerable: false, writable: true
+      value: findIndex, configurable: true, writable: true
     });
   } else {
     Array.prototype.findIndex = findIndex;
