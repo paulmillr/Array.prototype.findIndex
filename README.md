@@ -8,29 +8,32 @@ For browsers and node.js.
 * Just include repo before your scripts.
 * `npm install array.prototype.findIndex` if you’re using node.js.
 * `component install paulmillr/Array.prototype.findIndex` if you’re using [component(1)](https://github.com/component/component).
-* `bower install array.prototype.findindex` if you’re using [Twitter Bower](http://bower.io).
+* `bower install Array.prototype.findIndex` if you’re using [Twitter Bower](http://bower.io).
 
 ## Usage
 
 * `Array.prototype.findIndex(predicate[, thisArg])` returns first item index that matches `predicate` function.
-* `predicate(value, index, collection)`
+* `predicate(value, index, collection)`: takes three arguments
+    * `value`: current collection element
+    * `index`: current collection element index
+    * `collection`: the collection
 
 Node.js:
 
 ```javascript
-require('array.prototype.find');
+require('array.prototype.findindex');
 ```
 
 Browser:
 
 ```javascript
 // component(1)
-require('Array.prototype.find');
+require('Array.prototype.findIndex');
 ```
 
 Code example:
 
-```
+```javascript
 // Default:
 [1, 5, 10, 15].findIndex(function(a) {return a > 9;}) // 2
 ```

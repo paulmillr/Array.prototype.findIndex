@@ -1,5 +1,5 @@
 {
-  "name": "array.prototype.findindex",
+  "name": "Array.prototype.findIndex",
   "repo": "paulmillr/Array.prototype.findIndex",
   "description": "Array.prototype.findIndex ES6 polyfill.",
   "version": "0.1.0",
