@@ -16,10 +16,14 @@
   };
 
   if (Object.defineProperty) {
-    Object.defineProperty(Array.prototype, 'findIndex', {
-      value: findIndex, configurable: true, writable: true
-    });
-  } else {
+    try {
+      Object.defineProperty(Array.prototype, 'findIndex', {
+        value: findIndex, configurable: true, writable: true
+      });
+    } catch(e) {}
+  }
+
+  if (!Array.prototype.findIndex) {
     Array.prototype.findIndex = findIndex;
   }
 })(this);
