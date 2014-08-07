@@ -5,7 +5,7 @@
   "keywords": ["Array.prototype.findIndex", "findIndex", "es6"],
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,9 @@
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/paulmillr/Array.prototype.findIndex/issues"
+  },
+  "devDependencies": {
+    "chai": "~1.9.1",
+    "mocha": "~1.21.4"
   }
 }
