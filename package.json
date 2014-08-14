@@ -1,6 +1,6 @@
 {
   "name": "array.prototype.findindex",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Array.prototype.findIndex ES6 polyfill.",
   "keywords": ["Array.prototype.findIndex", "findIndex", "es6"],
   "main": "index.js",
