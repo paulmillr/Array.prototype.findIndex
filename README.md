@@ -10,6 +10,7 @@ For browsers and node.js.
 * `component install paulmillr/Array.prototype.findIndex` if you’re using [component(1)](https://github.com/component/component).
 * `bower install Array.prototype.findIndex` if you’re using [Twitter Bower](http://bower.io).
 
+
 ## Usage
 
 * `Array.prototype.findIndex(predicate[, thisArg])` returns first item index that matches `predicate` function.
