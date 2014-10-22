@@ -6,7 +6,7 @@ For browsers and node.js.
 
 ## Installation
 * Just include repo before your scripts.
-* `npm install array.prototype.findIndex` if you’re using node.js.
+* `npm install array.prototype.findindex` if you’re using node.js.
 * `component install paulmillr/Array.prototype.findIndex` if you’re using [component(1)](https://github.com/component/component).
 * `bower install Array.prototype.findIndex` if you’re using [Twitter Bower](http://bower.io).
 
