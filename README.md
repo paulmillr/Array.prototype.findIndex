@@ -29,7 +29,7 @@ Browser:
 
 ```javascript
 // component(1)
-require('Array.prototype.findIndex');
+require('array.prototype.findIndex');
 ```
 
 Code example:
