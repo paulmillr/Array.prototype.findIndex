@@ -1,5 +1,5 @@
 var expect = require("chai").expect;
-var arrayFindIndex = require('./');
+var arrayFindIndex = require('./polyfill');
 
 var runArrayTests = function() {
   var list = [5, 10, 15, 20];
