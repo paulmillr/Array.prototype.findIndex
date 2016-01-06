@@ -1,25 +1,12 @@
-// Array.prototype.findIndex - MIT License (c) 2013 Paul Miller <http://paulmillr.com>
-// For all details and docs: <https://github.com/paulmillr/Array.prototype.findIndex>
-(function (globals) {
-  Array.prototype.findIndex = function findIndex (predicate) {
-    var list = Object(this);
-    var length = Math.max(0, list.length) >>> 0; // ES.ToUint32;
-    if (length === 0) return -1;
-    if (typeof predicate !== 'function' || Object.prototype.toString.call(predicate) !== '[object Function]') {
-      throw new TypeError('Array#findIndex: predicate must be a function');
-    }
-    var thisArg = arguments.length > 1 ? arguments[1] : undefined;
-    for (var i = 0; i < length; i++) {
-      if (predicate.call(thisArg, list[i], i, list)) return i;
-    }
-    return -1;
-  };
+'use strict';
 
-  if (Object.defineProperty) {
-    try {
-      Object.defineProperty(Array.prototype, 'findIndex', {
-        value: findIndex, configurable: true, writable: true
-      });
-    } catch(e) {}
-  }
-}(this));
+module.exports = function getPolyfill() {
+	// Detect if an implementation exists
+	// Detect early implementations which skipped holes in sparse arrays
+	var implemented = Array.prototype.findIndex && ([, 1].findIndex(function (item, idx) {
+		return idx === 0;
+	}) === 0);
+
+
+	return implemented ? Array.prototype.findIndex : require('./implementation');
+};
