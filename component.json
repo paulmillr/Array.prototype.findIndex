@@ -12,6 +12,6 @@
 		"polyfill.js",
 		"shim.js",
 		"implementation.js",
-		"inedx.js"
+		"index.js"
 	]
 }
