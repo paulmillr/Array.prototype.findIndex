@@ -15,8 +15,8 @@ Icon?
 .svn
 
 # Node.js package manager
-/node_modules
-/npm-debug.log
+node_modules
+npm-debug.log
 
 # Other stuff
 *.pyc
