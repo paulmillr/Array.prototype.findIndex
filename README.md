@@ -19,17 +19,10 @@ For browsers and node.js.
     * `index`: current collection element index
     * `collection`: the collection
 
-Node.js:
-
 ```javascript
-require('array.prototype.findindex');
-```
+var findIndex = require('array.prototype.findindex');
 
-Browser:
-
-```javascript
-// component(1)
-require('array.prototype.findindex');
+findIndex.shim(); // if you want to install it on the global environment
 ```
 
 Code example:
