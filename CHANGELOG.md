@@ -1,3 +1,8 @@
+# 2.0.1
+ - [Fix] use call instead of apply in bound entry point function (#17)
+ - [Refactor] Remove unnecessary double ToLength call (#16)
+ - [Tests] run tests on travis-ci
+
 # 2.0.0
  - [Breaking] use es-shim API (#13)
  - [Docs] fix example in README (#9)
