@@ -9,10 +9,12 @@ var shim = require('./shim');
 
 var slice = Array.prototype.slice;
 
+var polyfill = getPolyfill();
+
 var boundShim = function findIndex(array, predicate) {
 	ES.RequireObjectCoercible(array);
 	var args = slice.call(arguments, 1);
-	return implementation.apply(array, args);
+	return polyfill.apply(array, args);
 };
 
 define(boundShim, {
