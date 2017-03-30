@@ -102,3 +102,21 @@ describe('shim', function() {
 		delete Object.prototype[1];
 	});
 });
+
+describe('single function', function() {
+	var findIndexAsFunction = function(func) {
+		var args = Array.prototype.slice.call(arguments);
+		args.unshift(this);
+		return arrayFindIndex.apply(undefined, args);
+	};
+
+	describe('clean Object.prototype', function() {
+		runTests(findIndexAsFunction);
+	});
+
+	describe('polluted Object.prototype', function() {
+		Object.prototype[1] = 42;
+		runTests(findIndexAsFunction);
+		delete Object.prototype[1];
+	});
+});
