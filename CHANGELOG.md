@@ -1,3 +1,6 @@
+# 2.0.2
+ - [Performance] the entry point should use the native function when compliant
+
 # 2.0.1
  - [Fix] use call instead of apply in bound entry point function (#17)
  - [Refactor] Remove unnecessary double ToLength call (#16)
