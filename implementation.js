@@ -5,7 +5,7 @@ var ES = require('es-abstract/es6');
 
 module.exports = function findIndex(predicate) {
 	var list = ES.ToObject(this);
-	var length = ES.ToLength(ES.ToLength(list.length));
+	var length = ES.ToLength(list.length);
 	if (!ES.IsCallable(predicate)) {
 		throw new TypeError('Array#findIndex: predicate must be a function');
 	}
