@@ -9,8 +9,16 @@ module.exports = function findIndex(predicate) {
 	if (!ES.IsCallable(predicate)) {
 		throw new TypeError('Array#findIndex: predicate must be a function');
 	}
-	if (length === 0) return -1;
-	var thisArg = arguments[1];
+
+	if (length === 0) {
+		return -1;
+	}
+
+	var thisArg;
+	if (arguments.length > 0) {
+		thisArg = arguments[1];
+	}
+
 	for (var i = 0, value; i < length; i++) {
 		value = list[i];
 		// inlined for performance: if (ES.Call(predicate, thisArg, [value, i, list])) return i;
@@ -18,5 +26,6 @@ module.exports = function findIndex(predicate) {
 			return i;
 		}
 	}
+
 	return -1;
 };
