@@ -13,7 +13,10 @@ module.exports = function findIndex(predicate) {
 	var thisArg = arguments[1];
 	for (var i = 0, value; i < length; i++) {
 		value = list[i];
-		if (ES.Call(predicate, thisArg, [value, i, list])) return i;
+		// inlined for performance: if (ES.Call(predicate, thisArg, [value, i, list])) return i;
+		if (predicate.apply(thisArg, [value, i, list])) {
+			return i;
+		}
 	}
 	return -1;
 };
