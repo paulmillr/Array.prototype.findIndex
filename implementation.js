@@ -1,12 +1,14 @@
 // Array.prototype.findIndex - MIT License (c) 2013 Paul Miller <http://paulmillr.com>
 // For all details and docs: <https://github.com/paulmillr/Array.prototype.findIndex>
 'use strict';
-var ES = require('es-abstract/es6');
+var IsCallable = require('es-abstract/2019/IsCallable');
+var ToLength = require('es-abstract/2019/ToLength');
+var ToObject = require('es-abstract/2019/ToObject');
 
 module.exports = function findIndex(predicate) {
-	var list = ES.ToObject(this);
-	var length = ES.ToLength(list.length);
-	if (!ES.IsCallable(predicate)) {
+	var list = ToObject(this);
+	var length = ToLength(list.length);
+	if (!IsCallable(predicate)) {
 		throw new TypeError('Array#findIndex: predicate must be a function');
 	}
 
@@ -21,7 +23,7 @@ module.exports = function findIndex(predicate) {
 
 	for (var i = 0, value; i < length; i++) {
 		value = list[i];
-		// inlined for performance: if (ES.Call(predicate, thisArg, [value, i, list])) return i;
+		// inlined for performance: if (Call(predicate, thisArg, [value, i, list])) return i;
 		if (predicate.apply(thisArg, [value, i, list])) {
 			return i;
 		}
