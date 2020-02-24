@@ -23,7 +23,7 @@
 		"url": "https://github.com/paulmillr/Array.prototype.findIndex/issues"
 	},
 	"devDependencies": {
-		"@es-shims/api": "^1.0.0",
+		"@es-shims/api": "^2.1.2",
 		"aud": "^1.0.0",
 		"chai": "^3.5.0",
 		"mocha": "^2.4.5"
