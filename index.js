@@ -11,15 +11,15 @@ var slice = Array.prototype.slice;
 
 var polyfill = getPolyfill();
 
-var boundShim = function findIndex(array, predicate) {
+var boundShim = function findIndex(array, predicate) { // eslint-disable-line no-unused-vars
 	RequireObjectCoercible(array);
 	var args = slice.call(arguments, 1);
 	return polyfill.apply(array, args);
 };
 
 define(boundShim, {
-	implementation: implementation,
 	getPolyfill: getPolyfill,
+	implementation: implementation,
 	shim: shim
 });
 

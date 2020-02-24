@@ -3,7 +3,7 @@
 var define = require('define-properties');
 var getPolyfill = require('./polyfill');
 
-module.exports = function shimArrayPrototypeFindIndex() {
+module.exports = function shimFindIndex() {
 	var polyfill = getPolyfill();
 
 	define(Array.prototype, { findIndex: polyfill }, {

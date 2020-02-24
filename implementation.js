@@ -1,6 +1,8 @@
 // Array.prototype.findIndex - MIT License (c) 2013 Paul Miller <http://paulmillr.com>
 // For all details and docs: <https://github.com/paulmillr/Array.prototype.findIndex>
+
 'use strict';
+
 var IsCallable = require('es-abstract/2019/IsCallable');
 var ToLength = require('es-abstract/2019/ToLength');
 var ToObject = require('es-abstract/2019/ToObject');

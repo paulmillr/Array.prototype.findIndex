@@ -9,7 +9,9 @@
 	],
 	"main": "index.js",
 	"scripts": {
-		"tests-only": "es-shim-api --bound && mocha test.js",
+		"lint": "eslint .",
+		"pretest": "npm run lint",
+		"tests-only": "es-shim-api --bound && mocha test",
 		"test": "npm run tests-only",
 		"posttest": "npx aud --production"
 	},
@@ -24,8 +26,10 @@
 	},
 	"devDependencies": {
 		"@es-shims/api": "^2.1.2",
+		"@ljharb/eslint-config": "^16.0.0",
 		"aud": "^1.0.0",
 		"chai": "^3.5.0",
+		"eslint": "^6.8.0",
 		"mocha": "^2.4.5"
 	},
 	"dependencies": {
