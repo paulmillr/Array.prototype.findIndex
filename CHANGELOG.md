@@ -1,3 +1,16 @@
+# 2.1.0
+ - [New] add `auto` entry point
+ - [Fix] remove `detect` file, broken/unused in v2
+ - [Refactor] use split-up `es-abstract` (77% bundle size decrease)
+ - [Performance] avoid checking `arguments` indexes beyond `arguments.length`
+ - [Performance] inline `ES.Call` since `IsCallable` is already checked prior to the loop.
+ - [Deps] update `define-properties`
+ - [meta] Only apps should have lockfiles
+ - [meta] add missing LICENSE file
+ - [Tests] add `npm run lint`
+ - [Tests] use shared travis-ci configs
+ - [Tests] use `aud` in posttest
+
 # 2.0.2
  - [Performance] the entry point should use the native function when compliant
 
