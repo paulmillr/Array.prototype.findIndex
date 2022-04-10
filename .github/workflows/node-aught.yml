@@ -1,0 +1,47 @@
+name: 'Tests: node.js < 10'
+
+on: [pull_request, push]
+
+jobs:
+  # tests:
+  #   uses: ljharb/actions/.github/workflows/node.yml@main
+  #   with:
+  #     range: '< 10'
+  #     type: minors
+  #     command: npm run tests-only
+
+  matrix:
+    runs-on: ubuntu-latest
+    outputs:
+      latest: ${{ steps.set-matrix.outputs.requireds }}
+    steps:
+      - uses: ljharb/actions/node/matrix@main
+        id: set-matrix
+        with:
+          type: 'minors'
+          preset: '< 10'
+
+  tests:
+    needs: [matrix]
+    name: 'tests'
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJson(needs.matrix.outputs.latest) }}
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ljharb/actions/node/install@main
+        name: 'nvm install ${{ matrix.node-version }} && npm install'
+        with:
+          node-version: ${{ matrix.node-version }}
+      - run: npm run tests-only
+      - uses: codecov/codecov-action@v2
+
+  node:
+    name: 'node < 10'
+    needs: [tests]
+    runs-on: ubuntu-latest
+    steps:
+      - run: 'echo tests completed'
