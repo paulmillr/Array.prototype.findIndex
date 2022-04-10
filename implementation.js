@@ -1,34 +1,31 @@
-// Array.prototype.findIndex - MIT License (c) 2013 Paul Miller <http://paulmillr.com>
-// For all details and docs: <https://github.com/paulmillr/Array.prototype.findIndex>
-
 'use strict';
 
-var IsCallable = require('es-abstract/2019/IsCallable');
-var ToLength = require('es-abstract/2019/ToLength');
-var ToObject = require('es-abstract/2019/ToObject');
+var Call = require('es-abstract/2021/Call');
+var Get = require('es-abstract/2021/Get');
+var IsCallable = require('es-abstract/2021/IsCallable');
+var LengthOfArrayLike = require('es-abstract/2021/LengthOfArrayLike');
+var ToBoolean = require('es-abstract/2021/ToBoolean');
+var ToObject = require('es-abstract/2021/ToObject');
+var ToString = require('es-abstract/2021/ToString');
 
 module.exports = function findIndex(predicate) {
-	var list = ToObject(this);
-	var length = ToLength(list.length);
+	var O = ToObject(this);
+	var len = LengthOfArrayLike(O);
 	if (!IsCallable(predicate)) {
 		throw new TypeError('Array#findIndex: predicate must be a function');
 	}
 
-	if (length === 0) {
-		return -1;
-	}
+	var thisArg = arguments.length > 1 ? arguments[1] : void undefined;
 
-	var thisArg;
-	if (arguments.length > 0) {
-		thisArg = arguments[1];
-	}
-
-	for (var i = 0, value; i < length; i++) {
-		value = list[i];
-		// inlined for performance: if (Call(predicate, thisArg, [value, i, list])) return i;
-		if (predicate.apply(thisArg, [value, i, list])) {
-			return i;
+	var k = 0;
+	while (k < len) {
+		var Pk = ToString(k);
+		var kValue = Get(O, Pk);
+		var testResult = ToBoolean(Call(predicate, thisArg, [kValue, k, O]));
+		if (testResult) {
+			return k;
 		}
+		k += 1;
 	}
 
 	return -1;

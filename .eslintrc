@@ -11,7 +11,16 @@
 		"max-params": 0,
 		"multiline-comment-style": 0,
 		"new-cap": [2, {
-			"capIsNewExceptions": ["ToInteger", "ToObject", "ToString", "ToLength", "IsCallable", "Call", "RequireObjectCoercible"]
+			"capIsNewExceptions": [
+				"Call",
+				"Get",
+				"IsCallable",
+				"LengthOfArrayLike",
+				"RequireObjectCoercible",
+				"ToBoolean",
+				"ToObject",
+				"ToString",
+			],
 		}],
 		"no-magic-numbers": 0,
 		"object-curly-newline": 0,
