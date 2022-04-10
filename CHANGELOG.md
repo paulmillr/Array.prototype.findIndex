@@ -1,3 +1,9 @@
+# 2.1.1
+ - [Refactor] update implementation to match spec text
+ - [meta] add `safe-publish-latest`
+ - [Dev Deps] update `eslint`, `@ljharb/eslint-config`, `aud`, `@es-shims/api`
+ - [Tests] migrate tests to Github Actions
+
 # 2.1.0
  - [New] add `auto` entry point
  - [Fix] remove `detect` file, broken/unused in v2
