@@ -29,12 +29,10 @@
 	"overrides": [
 		{
 			"files": "test/**",
-			"env": {
-				"mocha": true,
-			},
 			"rules": {
+				"id-length": 0,
 				"max-lines-per-function": 0,
-				"strict": 0,
+				"no-invalid-this": 0,
 			},
 		},
 	],
