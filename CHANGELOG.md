@@ -1,3 +1,9 @@
+# 2.2.0
+ - [New] `shim`/`auto`: add `findIndex` to `Symbol.unscopables`
+ - [Tests] migrate to tape
+ - [Deps] update `es-abstract`
+ - [Dev Deps] update `@ljharb/eslint-config`
+
 # 2.1.1
  - [Refactor] update implementation to match spec text
  - [meta] add `safe-publish-latest`
