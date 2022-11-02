@@ -1,3 +1,9 @@
+# 2.2.1
+ - [Deps] update `define-properties`, `es-abstract`
+ - [meta] use `npmignore` to autogenerate an npmignore file
+ - [actions] update rebase action to use reusable workflow
+ - [Dev Deps] update `aud`, `functions-have-names`, `tape`
+
 # 2.2.0
  - [New] `shim`/`auto`: add `findIndex` to `Symbol.unscopables`
  - [Tests] migrate to tape
