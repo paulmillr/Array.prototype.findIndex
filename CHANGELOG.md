@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.2.2](https://github.com/ljharb/Array.prototype.findIndex/compare/v2.2.1...v2.2.2) - 2023-08-27
+
+### Commits
+
+- [meta] add `auto-changelog` [`d653e4c`](https://github.com/ljharb/Array.prototype.findIndex/commit/d653e4c1d09ffb154e7452530ec9072157505130)
+- [Deps] update `define-properties`, `es-abstract` [`6afe819`](https://github.com/ljharb/Array.prototype.findIndex/commit/6afe819c42ff3e207432613db0aa035d3cd7ccc7)
+- [Dev Deps] update `@es-shims/api`, `@ljharb/eslint-config`, `aud`, `tape` [`c65fb5f`](https://github.com/ljharb/Array.prototype.findIndex/commit/c65fb5f37731f37a6674c1fec274edd5e63e61e8)
+
 <!-- auto-changelog-above -->
 
 # 2.2.1
