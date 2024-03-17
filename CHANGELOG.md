@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.2.3](https://github.com/ljharb/Array.prototype.findIndex/compare/v2.2.2...v2.2.3) - 2024-03-16
+
+### Commits
+
+- [Refactor] use `es-object-atoms`, update `es-abstract` [`7747551`](https://github.com/ljharb/Array.prototype.findIndex/commit/7747551fe933fc7355dd69f855d48626ee083d6a)
+- [Deps] update `call-bind`, `define-properties`, `es-shim-unscopables` [`d0f9882`](https://github.com/ljharb/Array.prototype.findIndex/commit/d0f98829e8d853c46c453ff8801576684e96b1ed)
+- [Dev Deps] update `aud`, `npmignore`, `tape` [`f6a1abf`](https://github.com/ljharb/Array.prototype.findIndex/commit/f6a1abfc96ac033179455d466ba7c28cde107fdb)
+
 ## [v2.2.2](https://github.com/ljharb/Array.prototype.findIndex/compare/v2.2.1...v2.2.2) - 2023-08-27
 
 ### Commits
