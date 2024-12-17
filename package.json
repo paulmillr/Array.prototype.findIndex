@@ -46,9 +46,9 @@
 		"tape": "^5.9.0"
 	},
 	"dependencies": {
-		"call-bind": "^1.0.7",
+		"call-bind": "^1.0.8",
 		"define-properties": "^1.2.1",
-		"es-abstract": "^1.23.3",
+		"es-abstract": "^1.23.6",
 		"es-object-atoms": "^1.0.0",
 		"es-shim-unscopables": "^1.0.2"
 	},
