@@ -5,6 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [v2.2.4](https://github.com/ljharb/Array.prototype.findIndex/compare/v2.2.3...v2.2.4) - 2024-12-17
+
+### Commits
+
+- [actions] split out node 10-20, and 20+ [`22ec19f`](https://github.com/ljharb/Array.prototype.findIndex/commit/22ec19ff06322731bffebc82f74cd1c5c7bdd28e)
+- [Dev Deps] update `@es-shims/api`, `auto-changelog`, `tape` [`60c8f4a`](https://github.com/ljharb/Array.prototype.findIndex/commit/60c8f4a80830034800977081a153b1c1e858345d)
+- [Deps] update `call-bind`, `es-abstract` [`31f714f`](https://github.com/ljharb/Array.prototype.findIndex/commit/31f714fd1d73f24369313138fa3a9c6dc4d30d8f)
+- [Dev Deps] update `@es-shims/api`, `@ljharb/eslint-config` [`763157c`](https://github.com/ljharb/Array.prototype.findIndex/commit/763157c9ab768fc8e474357a448174d838348e71)
+- [meta] add missing `engines.node` [`1f5d651`](https://github.com/ljharb/Array.prototype.findIndex/commit/1f5d6510f43e8e33b96c2575ccad6b6719bbbc72)
+- [Refactor] use `call-bound` directly [`ebc05aa`](https://github.com/ljharb/Array.prototype.findIndex/commit/ebc05aa2a2b60b576105a988e89bbbb8272d4c4d)
+- [Tests] replace `aud` with `npm audit` [`1f6d4de`](https://github.com/ljharb/Array.prototype.findIndex/commit/1f6d4de6868be6e22097fb3f656b7acb6fc38ba5)
+- [meta] add `SECURITY.md` [`2cf450e`](https://github.com/ljharb/Array.prototype.findIndex/commit/2cf450eae9393815ebe6f59177d101666bb8c06c)
+- [Deps] update `es-abstract` [`33ede20`](https://github.com/ljharb/Array.prototype.findIndex/commit/33ede205919316a2709123fee24b849e5dea3a88)
+- [Dev Deps] add missing peer dep [`906ece2`](https://github.com/ljharb/Array.prototype.findIndex/commit/906ece22b58b4cfaef2543bf6ba05de241182a44)
+
 ## [v2.2.3](https://github.com/ljharb/Array.prototype.findIndex/compare/v2.2.2...v2.2.3) - 2024-03-16
 
 ### Commits
