@@ -32,9 +32,9 @@
 		"url": "https://github.com/paulmillr/Array.prototype.findIndex/issues"
 	},
 	"devDependencies": {
-		"@es-shims/api": "^2.5.0",
+		"@es-shims/api": "^2.5.1",
 		"@ljharb/eslint-config": "^21.1.1",
-		"auto-changelog": "^2.4.0",
+		"auto-changelog": "^2.5.0",
 		"eslint": "=8.8.0",
 		"functions-have-names": "^1.2.3",
 		"has-strict-mode": "^1.0.1",
@@ -42,7 +42,7 @@
 		"npmignore": "^0.3.1",
 		"nyc": "^10.3.2",
 		"safe-publish-latest": "^2.0.0",
-		"tape": "^5.7.5"
+		"tape": "^5.9.0"
 	},
 	"dependencies": {
 		"call-bind": "^1.0.7",
